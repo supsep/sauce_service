@@ -1,0 +1,45 @@
+apply plugin: 'java'
+apply plugin:'application'
+apply plugin:'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
+mainClassName = "com.sauceservice.Solution"
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.4.RELEASE")
+    }
+}
+
+bootJar {
+    baseName = 'gs-consuming-rest'
+    version =  '0.1.0'
+}
+
+run {
+    standardInput = System.in
+}
+
+dependencies {
+    compile 'junit:junit:4.12'
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework:spring-web")
+    compile("com.fasterxml.jackson.core:jackson-databind")
+    testCompile 'junit:junit:4.12'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
