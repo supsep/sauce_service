@@ -1,0 +1,6 @@
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: NONE
+
+logging.level.org.springframework=OFF
+logging.level.root=OFF

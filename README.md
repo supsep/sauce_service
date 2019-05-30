@@ -1,7 +1,5 @@
-
-  
-    
 # Sauce Labs Service
+Monitor the health of the Sauce Labs web service
 
     
 ## Getting Started    
@@ -11,7 +9,7 @@
 ### Running    
  To run the program:    
     
-``` ./gradlew run Enter a String to find permutations of: ```    
+``` ./gradlew run Monitoring status: ```
 
 
 ``` >sep The following are permutations of the string "sep"  : "sep", "esp", "pse", "spe", "eps", "pes" ```
